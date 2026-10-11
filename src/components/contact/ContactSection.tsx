@@ -370,12 +370,13 @@ export const ContactSection: React.FC = () => {
                         />
                       </div>
 
-                      {/* Buttons with loading effect */}
-                      <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                      {/* Buttons with loading effect & clear hierarchy */}
+                      <div className="pt-2 space-y-3">
+                        {/* Primary Submit Button */}
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="flex-1 inline-flex items-center justify-center gap-2 h-11 sm:h-12 px-6 rounded-full bg-[#0866E8] hover:bg-[#0654c2] text-white text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all cursor-pointer disabled:opacity-75"
+                          className="w-full inline-flex items-center justify-center gap-2.5 h-12 px-6 rounded-xl sm:rounded-full bg-[#0866E8] hover:bg-[#0654c2] text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow-md hover:shadow-[#0866E8]/20 transition-all cursor-pointer disabled:opacity-75 focus:outline-none focus:ring-2 focus:ring-[#0866E8]/40"
                         >
                           {isSubmitting ? (
                             <>
@@ -390,13 +391,23 @@ export const ContactSection: React.FC = () => {
                           )}
                         </button>
 
+                        {/* Subtle Divider */}
+                        <div className="flex items-center gap-3 py-0.5">
+                          <span className="h-px flex-1 bg-slate-200" />
+                          <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+                            Or Chat Directly
+                          </span>
+                          <span className="h-px flex-1 bg-slate-200" />
+                        </div>
+
+                        {/* Secondary WhatsApp Direct Action */}
                         <button
                           type="button"
                           onClick={handleWhatsAppDirect}
-                          className="inline-flex items-center justify-center gap-2 h-11 sm:h-12 px-6 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all cursor-pointer"
+                          className="w-full inline-flex items-center justify-center gap-2 h-11 px-5 rounded-xl sm:rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200/90 text-xs sm:text-sm font-semibold transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
                         >
-                          <MessageSquare className="w-4 h-4" />
-                          <span>Send via WhatsApp</span>
+                          <MessageSquare className="w-4 h-4 text-emerald-600" />
+                          <span>Send Details via WhatsApp</span>
                         </button>
                       </div>
                     </form>
@@ -408,97 +419,6 @@ export const ContactSection: React.FC = () => {
           </div>
 
         </div>
-
-        {/* Dark Navy Horizon Placements Contact Banner */}
-        <ScrollReveal direction="up" delayMs={200}>
-          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-r from-[#071738] via-[#0B1F45] to-[#122F68] text-white p-6 sm:p-9 lg:p-11 shadow-lg border border-blue-900/30">
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center">
-              
-              {/* Left Side: Contact Us Branding with Pin Icon */}
-              <div className="lg:col-span-5 flex flex-col justify-center">
-                <div className="flex items-center gap-3.5 mb-3">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center text-[#D7A62A] shadow-inner shrink-0">
-                    <MapPin className="w-5 h-5 fill-[#D7A62A]/20" />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="w-3.5 h-[1.5px] bg-[#D7A62A] inline-block" />
-                      <span className="text-[11px] sm:text-xs font-bold tracking-widest text-[#D7A62A] uppercase">
-                        CONTACT US
-                      </span>
-                    </div>
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white mt-0.5">
-                      Horizon Placements
-                    </h3>
-                  </div>
-                </div>
-
-                <p className="text-slate-300 text-xs sm:text-sm max-w-sm mb-2 leading-relaxed font-normal">
-                  Connect with our dedicated overseas placement advisors for personalized consultation and smooth documentation.
-                </p>
-              </div>
-
-              {/* Vertical Divider for desktop */}
-              <div className="hidden lg:block lg:col-span-1 h-24 w-[1px] bg-gradient-to-b from-transparent via-blue-700/40 to-transparent mx-auto" />
-
-              {/* Right Side: Contact Information Details */}
-              <div className="lg:col-span-6 space-y-3">
-                
-                {/* Address */}
-                <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/10 flex items-center justify-center text-sky-300 shrink-0 mt-0.5">
-                    <MapPin className="w-4 h-4" />
-                  </div>
-                  <div className="text-xs sm:text-sm">
-                    <p className="text-slate-200 leading-relaxed font-normal">
-                      {siteConfig.contact.address}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Phone */}
-                <div className="flex items-center gap-3">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/10 flex items-center justify-center text-sky-300 shrink-0">
-                    <Phone className="w-4 h-4" />
-                  </div>
-                  <div className="flex flex-wrap items-center gap-x-2.5 sm:gap-x-3 text-xs sm:text-sm text-slate-200">
-                    <span className="text-slate-400 text-xs">Phone:</span>
-                    <a
-                      href={`tel:${siteConfig.contact.phoneNumbers[0].replace(/\s+/g, '')}`}
-                      className="font-semibold text-white hover:text-sky-300 transition-colors"
-                    >
-                      {siteConfig.contact.phoneNumbers[0]}
-                    </a>
-                    <span className="text-slate-500">|</span>
-                    <a
-                      href={`tel:${siteConfig.contact.phoneNumbers[1].replace(/\s+/g, '')}`}
-                      className="font-semibold text-white hover:text-sky-300 transition-colors"
-                    >
-                      {siteConfig.contact.phoneNumbers[1]}
-                    </a>
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div className="flex items-center gap-3">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/10 flex items-center justify-center text-sky-300 shrink-0">
-                    <Mail className="w-4 h-4" />
-                  </div>
-                  <div className="text-xs sm:text-sm">
-                    <a
-                      href={`mailto:${siteConfig.contact.email}`}
-                      className="text-slate-200 hover:text-sky-300 transition-colors font-medium break-all"
-                    >
-                      {siteConfig.contact.email}
-                    </a>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-        </ScrollReveal>
 
       </div>
     </section>

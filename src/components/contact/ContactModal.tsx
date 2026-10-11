@@ -209,7 +209,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 inline-flex items-center justify-center gap-2 h-11 px-5 rounded-full bg-[#0866E8] hover:bg-[#0654c2] text-white text-xs sm:text-sm font-semibold shadow-sm transition-all cursor-pointer disabled:opacity-75"
+                  className="flex-1 inline-flex items-center justify-center gap-2 h-11 px-5 rounded-xl sm:rounded-full bg-[#0866E8] hover:bg-[#0654c2] text-white text-xs sm:text-sm font-bold shadow-sm transition-all cursor-pointer disabled:opacity-75 focus:outline-none focus:ring-2 focus:ring-[#0866E8]/40"
                 >
                   {isSubmitting ? (
                     <>
@@ -227,9 +227,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 <button
                   type="button"
                   onClick={handleWhatsAppSubmit}
-                  className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all cursor-pointer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 h-11 px-5 rounded-xl sm:rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200/90 text-xs sm:text-sm font-semibold transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <MessageSquare className="w-4 h-4 text-emerald-600" />
                   <span>Direct WhatsApp</span>
                 </button>
               </div>
