@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Horizon Placements — Client Web Application
 
-## Getting Started
+A modern, high-performance Next.js web application built for **Horizon Placements**, an international healthcare recruitment and documentation consultancy.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Icons**: Lucide React
+- **Client Features**: Interactive Consultation Modal, WhatsApp Direct Connect, Smooth Section Navigation
+
+---
+
+## 📁 Modular Folder Structure
+
+```text
+C:\kavya\horizone/
+├── public/
+│   ├── logo.png                # Transparent brand logo
+│   ├── logo-mark.png           # Executive golden badge icon
+│   ├── logo-original.png       # Original provided logo
+│   └── hero-professionals.jpg  # Hero composite graphic
+├── src/
+│   ├── app/
+│   │   ├── globals.css         # Global styles & keyframe animations
+│   │   ├── layout.tsx          # Root layout & SEO metadata
+│   │   └── page.tsx            # Main landing page
+│   ├── components/
+│   │   ├── navbar/
+│   │   │   └── Navbar.tsx      # Responsive header with active nav indicator
+│   │   ├── hero/
+│   │   │   └── Hero.tsx        # Hero section with airplane flight trail & badges
+│   │   ├── services/
+│   │   │   ├── ServicesSection.tsx # "Our Services" grid matching design
+│   │   │   └── ServiceCard.tsx     # Reusable service card component
+│   │   ├── why-choose-us/
+│   │   │   ├── WhyChooseUsSection.tsx # "Why Choose Us?" feature section
+│   │   │   └── FeatureCard.tsx        # Reusable feature card
+│   │   ├── about/
+│   │   │   └── AboutSection.tsx    # Company background & credentials
+│   │   ├── contact/
+│   │   │   ├── ContactBanner.tsx   # Dark navy contact card with direct links
+│   │   │   └── ContactModal.tsx    # Interactive consultation & inquiry modal
+│   │   ├── footer/
+│   │   │   └── Footer.tsx          # Clean footer with copyright
+│   │   └── ui/
+│   │       └── FloatingWhatsApp.tsx # Floating quick WhatsApp chat button
+│   ├── data/
+│   │   ├── siteConfig.ts       # Contact details, address, navigation links
+│   │   ├── services.ts         # Services data (Recruitment, Dataflow, Staffing, etc.)
+│   │   └── features.ts         # Why Choose Us data
+│   └── types/
+│       └── index.ts            # TypeScript interfaces
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏃‍♂️ How to Run
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Open a terminal in `C:\kavya\horizone`:
+   ```bash
+   npm run dev
+   ```
+2. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To create a production build:
+```bash
+npm run build
+npm run start
+```
