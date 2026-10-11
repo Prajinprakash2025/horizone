@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { X, Send, CheckCircle2, MessageSquare, Loader2 } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 import { ServiceItem } from '@/types';
@@ -28,14 +28,17 @@ export const ContactModal: React.FC<ContactModalProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  useEffect(() => {
+  const [previousService, setPreviousService] = useState(selectedService);
+  // Adjust only the selected service; keep the candidate's entered details.
+  if (selectedService !== previousService) {
+    setPreviousService(selectedService);
     if (selectedService) {
       setFormData((prev) => ({
         ...prev,
         service: selectedService.title,
       }));
     }
-  }, [selectedService]);
+  }
 
   if (!isOpen) return null;
 
@@ -169,7 +172,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     <option value="Documentation Support">Documentation Support (Dataflow / Licensing)</option>
                     <option value="Prometric Coaching">Prometric / Exam Coaching</option>
                     <option value="Staffing Solutions">Staffing Solutions (For Employers)</option>
-                    <option value="End-to-End Support">End-to-End Candidate Support</option>
+                    <option value="End-to-End Candidate Support">End-to-End Candidate Support</option>
                   </select>
                 </div>
 

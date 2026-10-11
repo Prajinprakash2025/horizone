@@ -69,7 +69,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         {/* 4 Main Services Grid with Staggered ScrollReveal */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-7 mb-14 sm:mb-18">
           {servicesData.map((service, idx) => (
-            <ScrollReveal key={service.id} direction="up" delayMs={100 + idx * 80}>
+            <ScrollReveal key={service.id} direction="up" delayMs={100 + idx * 80} className="h-full">
               <ServiceCard
                 service={service}
                 onSelect={onSelectService}

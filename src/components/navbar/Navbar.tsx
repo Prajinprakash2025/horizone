@@ -83,13 +83,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
               className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0866E8] rounded-lg"
               aria-label="Horizon Placements - Home"
             >
-              <div className="relative h-9 w-36 sm:h-11 sm:w-44 transition-opacity hover:opacity-90">
+              <div className="relative h-10 w-40 sm:h-14 sm:w-56 overflow-hidden transition-opacity hover:opacity-90">
                 <Image
-                  src="/logo.png"
+                  src="/logo-full.png"
                   alt="Horizon Placements"
                   fill
-                  sizes="(max-width: 640px) 144px, 176px"
-                  className="object-contain object-left"
+                  sizes="(max-width: 640px) 160px, 224px"
+                  className="object-cover object-left"
                   priority
                 />
               </div>

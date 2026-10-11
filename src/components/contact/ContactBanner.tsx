@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { MapPin, Phone, Mail, MessageSquare, ExternalLink, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageSquare, Clock } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
 interface ContactBannerProps {

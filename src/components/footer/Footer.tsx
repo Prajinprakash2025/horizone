@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import {
   MapPin,
@@ -9,7 +9,6 @@ import {
   Clock,
   ArrowUp,
   MessageSquare,
-  ShieldCheck,
   CheckCircle2,
   ChevronRight,
   Globe2,
@@ -17,12 +16,12 @@ import {
 import { navigationLinks, siteConfig } from '@/data/siteConfig';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 
-export const Footer: React.FC = () => {
-  const [year, setYear] = useState('2024');
+const subscribeYear = () => () => {};
+const currentYear = () => new Date().getFullYear().toString();
+const serverYear = () => '';
 
-  useEffect(() => {
-    setYear(new Date().getFullYear().toString());
-  }, []);
+export const Footer: React.FC = () => {
+  const year = useSyncExternalStore(subscribeYear, currentYear, serverYear);
 
   const scrollToTop = () => {
     window.scrollTo({

@@ -19,8 +19,8 @@ export const ContactSection: React.FC = () => {
     name: '',
     email: '',
     phone: '',
-    profession: 'Registered Nurse',
-    destination: 'United Arab Emirates (DHA / MOH)',
+    profession: 'Registered Nurse (BSc / GNM)',
+    destination: 'United Arab Emirates (DHA / MOH / DOH)',
     service: 'Recruitment & Job Placement',
     message: '',
   });
@@ -53,12 +53,12 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 md:py-24 bg-white relative overflow-hidden">
+    <section id="contact" className="contact-section py-16 sm:py-20 md:py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading with ScrollReveal */}
         <ScrollReveal direction="up" delayMs={100}>
-          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <div className="contact-heading text-center max-w-2xl mx-auto mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EAF4FF] border border-[#0866E8]/15 mb-3.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#D7A62A]" />
               <span className="text-xs font-bold tracking-widest text-[#0866E8] uppercase">
@@ -67,7 +67,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B1F45] tracking-tight">
-              Contact <span className="text-[#0866E8]">Us</span>
+              Let’s plan your <span className="text-[#0866E8]">next step.</span>
             </h2>
 
             <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg text-[#52627A] font-normal">
@@ -77,13 +77,13 @@ export const ContactSection: React.FC = () => {
         </ScrollReveal>
 
         {/* 2-Column Grid: Left Details & Right Form */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 mb-12 sm:mb-16 items-start">
+        <div className="contact-shell grid grid-cols-1 lg:grid-cols-12 items-stretch">
           
           {/* Left Column: Contact Cards & Information */}
-          <div className="lg:col-span-5 space-y-5">
-            <ScrollReveal direction="right" delayMs={150}>
+          <div className="contact-details lg:col-span-5">
+            <ScrollReveal direction="none" delayMs={150} className="contact-office-wrapper">
               {/* Quick Contact Info Card */}
-              <div className="bg-[#F8FAFD] rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-slate-200/80 shadow-xs space-y-5 sm:space-y-6">
+              <div className="contact-office p-6 sm:p-9 space-y-6 sm:space-y-8">
                 <h3 className="text-lg sm:text-xl font-bold text-[#0B1F45] mb-1">
                   Office Information
                 </h3>
@@ -178,7 +178,7 @@ export const ContactSection: React.FC = () => {
 
             {/* Direct WhatsApp Callout */}
             <ScrollReveal direction="up" delayMs={200}>
-              <div className="bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 shadow-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+              <div className="contact-chat text-white p-6 sm:p-9 flex flex-col items-stretch gap-5">
                 <div className="flex items-center gap-3.5">
                   <div className="w-11 h-11 rounded-2xl bg-white/20 flex items-center justify-center shrink-0">
                     <MessageSquare className="w-5 h-5" />
@@ -192,7 +192,7 @@ export const ContactSection: React.FC = () => {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Horizon%20Placements,%20I%20would%20like%20to%20know%20more%20about%20your%20services.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto h-10 px-5 rounded-full bg-white text-emerald-800 hover:bg-emerald-50 text-xs sm:text-sm font-bold text-center inline-flex items-center justify-center transition-colors whitespace-nowrap"
+                  className="contact-chat-button w-full h-11 px-5 rounded-full text-sm font-bold text-center inline-flex items-center justify-center transition-colors"
                 >
                   Chat on WhatsApp
                 </a>
@@ -202,9 +202,9 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Right Column: Full Interactive Contact Form */}
-          <div className="lg:col-span-7">
-            <ScrollReveal direction="left" delayMs={150}>
-              <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-9 border border-slate-200/80 shadow-xs">
+          <div className="contact-form-column lg:col-span-7">
+            <ScrollReveal direction="none" delayMs={150} className="h-full">
+              <div className="contact-form-card bg-white p-6 sm:p-9 lg:p-11 h-full">
                 
                 {isSubmitted ? (
                   <div className="text-center py-10 sm:py-12 space-y-4 animate-fade-in">
@@ -251,10 +251,10 @@ export const ContactSection: React.FC = () => {
                       {/* Name & Phone */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                         <div>
-                          <label className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
+                          <label htmlFor="contact-name" className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
                             Full Name <span className="text-red-500">*</span>
                           </label>
-                          <input
+                          <input id="contact-name"
                             type="text"
                             required
                             value={formData.name}
@@ -265,10 +265,10 @@ export const ContactSection: React.FC = () => {
                         </div>
 
                         <div>
-                          <label className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
+                          <label htmlFor="contact-phone" className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
                             Phone / WhatsApp Number <span className="text-red-500">*</span>
                           </label>
-                          <input
+                          <input id="contact-phone"
                             type="tel"
                             required
                             value={formData.phone}
@@ -281,10 +281,10 @@ export const ContactSection: React.FC = () => {
 
                       {/* Email */}
                       <div>
-                        <label className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
+                        <label htmlFor="contact-email" className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
                           Email Address <span className="text-red-500">*</span>
                         </label>
-                        <input
+                        <input id="contact-email"
                           type="email"
                           required
                           value={formData.email}
@@ -297,10 +297,10 @@ export const ContactSection: React.FC = () => {
                       {/* Profession & Target Country */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                         <div>
-                          <label className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
+                          <label htmlFor="contact-profession" className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
                             Profession / Specialization
                           </label>
-                          <select
+                          <select id="contact-profession"
                             value={formData.profession}
                             onChange={(e) => setFormData({ ...formData, profession: e.target.value })}
                             className="w-full h-11 px-3 sm:px-3.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0866E8] bg-white text-[#0B1F45]"
@@ -319,10 +319,10 @@ export const ContactSection: React.FC = () => {
                         </div>
 
                         <div>
-                          <label className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
+                          <label htmlFor="contact-destination" className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
                             Preferred Country / Authority
                           </label>
-                          <select
+                          <select id="contact-destination"
                             value={formData.destination}
                             onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
                             className="w-full h-11 px-3 sm:px-3.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0866E8] bg-white text-[#0B1F45]"
@@ -340,10 +340,10 @@ export const ContactSection: React.FC = () => {
 
                       {/* Service Needed */}
                       <div>
-                        <label className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
+                        <label htmlFor="contact-service" className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
                           Service Needed
                         </label>
-                        <select
+                        <select id="contact-service"
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                           className="w-full h-11 px-3 sm:px-3.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0866E8] bg-white text-[#0B1F45]"
@@ -358,10 +358,10 @@ export const ContactSection: React.FC = () => {
 
                       {/* Message */}
                       <div>
-                        <label className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
+                        <label htmlFor="contact-message" className="block text-xs font-semibold text-[#0B1F45] mb-1.5">
                           Your Query or Experience Details (Optional)
                         </label>
-                        <textarea
+                        <textarea id="contact-message"
                           rows={3}
                           value={formData.message}
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
