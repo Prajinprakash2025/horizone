@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   Loader2,
 } from 'lucide-react';
+import { InstagramIcon } from '@/components/ui/Icons';
 import { siteConfig } from '@/data/siteConfig';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 
@@ -125,13 +126,6 @@ export const ContactSection: React.FC = () => {
                       >
                         {siteConfig.contact.phoneNumbers[0]}
                       </a>
-                      <span className="hidden sm:inline text-slate-300">|</span>
-                      <a
-                        href={`tel:${siteConfig.contact.phoneNumbers[1].replace(/\s+/g, '')}`}
-                        className="hover:text-[#0866E8] transition-colors"
-                      >
-                        {siteConfig.contact.phoneNumbers[1]}
-                      </a>
                     </div>
                     <span className="text-[11px] sm:text-xs text-[#52627A] block mt-0.5">
                       Lines open Mon–Sat 9:00 AM – 6:30 PM
@@ -156,6 +150,28 @@ export const ContactSection: React.FC = () => {
                     </a>
                   </div>
                 </div>
+
+                {/* Instagram */}
+                {siteConfig.contact.instagram && (
+                  <div className="flex items-start gap-3.5">
+                    <div className="w-10 h-10 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center shrink-0 mt-0.5 border border-pink-100">
+                      <InstagramIcon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                        Instagram
+                      </h4>
+                      <a
+                        href={`https://www.instagram.com/${siteConfig.contact.instagram}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs sm:text-sm font-semibold text-pink-600 hover:underline block mt-0.5"
+                      >
+                        @{siteConfig.contact.instagram}
+                      </a>
+                    </div>
+                  </div>
+                )}
 
                 {/* Working Hours */}
                 <div className="flex items-start gap-3.5 pt-2 border-t border-slate-200/60">

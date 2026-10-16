@@ -110,13 +110,6 @@ export const ContactBanner: React.FC<ContactBannerProps> = ({ onOpenModal }) => 
                   >
                     {siteConfig.contact.phoneNumbers[0]}
                   </a>
-                  <span className="text-slate-500">|</span>
-                  <a
-                    href={`tel:${siteConfig.contact.phoneNumbers[1].replace(/\s+/g, '')}`}
-                    className="font-semibold text-white hover:text-sky-300 transition-colors"
-                  >
-                    {siteConfig.contact.phoneNumbers[1]}
-                  </a>
                 </div>
               </div>
 

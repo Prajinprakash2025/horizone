@@ -23,9 +23,10 @@ export const siteConfig: {
     tagline: 'Providing end-to-end solutions for candidates and employers worldwide.',
     eyebrow: 'CONTACT US',
     address: '1st Main Rd, Shakthi Nagar, Nadur Payyam, Maradu, Kochi, Kerala – 682304',
-    phoneNumbers: ['+91 75919 88867', '+91 79079 98807'],
-    email: 'infohorizonplacements@gmail.com',
-    whatsapp: '917591988867',
+    phoneNumbers: ['+91 79079 99807'],
+    email: 'info.horizonplacements@gmail.com',
+    whatsapp: '917907999807',
     workingHours: 'Mon - Sat: 9:00 AM - 6:30 PM',
+    instagram: 'horizon.placements',
   },
 };

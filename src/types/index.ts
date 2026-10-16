@@ -30,4 +30,5 @@ export interface ContactInfo {
   email: string;
   whatsapp: string;
   workingHours: string;
+  instagram?: string;
 }

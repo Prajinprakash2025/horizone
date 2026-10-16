@@ -13,6 +13,7 @@ import {
   ChevronRight,
   Globe2,
 } from 'lucide-react';
+import { InstagramIcon } from '@/components/ui/Icons';
 import { navigationLinks, siteConfig } from '@/data/siteConfig';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 
@@ -248,13 +249,6 @@ export const Footer: React.FC = () => {
                     >
                       {siteConfig.contact.phoneNumbers[0]}
                     </a>
-                    <span className="text-slate-500">|</span>
-                    <a
-                      href={`tel:${siteConfig.contact.phoneNumbers[1].replace(/\s+/g, '')}`}
-                      className="font-medium hover:text-white transition-colors"
-                    >
-                      {siteConfig.contact.phoneNumbers[1]}
-                    </a>
                   </div>
                 </div>
 
@@ -272,6 +266,25 @@ export const Footer: React.FC = () => {
                     </a>
                   </div>
                 </div>
+
+                {/* Instagram */}
+                {siteConfig.contact.instagram && (
+                  <div className="flex items-center gap-3 group">
+                    <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-[#D7A62A] shrink-0 group-hover:bg-pink-500/30 transition-colors">
+                      <InstagramIcon className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <a
+                        href={`https://www.instagram.com/${siteConfig.contact.instagram}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-200 hover:text-pink-400 transition-colors"
+                      >
+                        @{siteConfig.contact.instagram}
+                      </a>
+                    </div>
+                  </div>
+                )}
 
                 {/* Working Hours */}
                 <div className="flex items-center gap-3 pt-1">
