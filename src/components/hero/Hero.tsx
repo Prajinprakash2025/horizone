@@ -40,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
         <div className="site-container hero-layout">
           <div className="hero-copy">
             <p className="design-eyebrow"><span />Global healthcare recruitment</p>
-            <h1 className="design-heading">Your career.<br /><span>Beyond borders.</span></h1>
+            <h1 className="design-heading">Your career in India.<br /><span>Beyond borders.</span></h1>
             <p className="hero-description">Connecting healthcare professionals with opportunities across India and the Gulf. From licensing to placement, we guide every step.</p>
             <div className="hero-actions">
               <button className="design-button primary" onClick={() => onExploreClick ? onExploreClick() : scrollTo('services')}>Explore Services <ArrowRight size={18} /></button>
