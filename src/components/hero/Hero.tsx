@@ -9,9 +9,21 @@ interface HeroProps { onExploreClick?: () => void; }
 export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   const promises = [
-    { icon: Globe, title: 'Verified Gulf Placements', description: 'Opportunities across India and the Gulf' },
-    { icon: Stethoscope, title: 'MOH & Prometric Assistance', description: 'Licensing, verification and exam support' },
-    { icon: ShieldCheck, title: 'Transparent Process', description: 'Clear guidance, from application to joining' },
+    {
+      icon: Globe,
+      title: '01 — Healthcare Recruitment & Placements',
+      description: 'Opportunities across India and the Gulf through our recruitment network and licensed recruitment partners.',
+    },
+    {
+      icon: Stethoscope,
+      title: '02 — Licensing & Exam Assistance',
+      description: 'DataFlow/PSV, professional licensing, Prometric and destination-specific exam support.',
+    },
+    {
+      icon: ShieldCheck,
+      title: '03 — Complete Career Support',
+      description: 'Clear guidance and coordination from profile evaluation and recruitment to documentation and joining.',
+    },
   ];
   return (
     <section id="home" className="blended-hero">
@@ -29,7 +41,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           <div className="hero-copy">
             <p className="design-eyebrow"><span />Global healthcare recruitment</p>
             <h1 className="design-heading">Your career.<br /><span>Beyond borders.</span></h1>
-            <p className="hero-description">Connecting healthcare professionals with opportunities in the Gulf and beyond. From licensing to placement, we guide every step.</p>
+            <p className="hero-description">Connecting healthcare professionals with opportunities across India and the Gulf. From licensing to placement, we guide every step.</p>
             <div className="hero-actions">
               <button className="design-button primary" onClick={() => onExploreClick ? onExploreClick() : scrollTo('services')}>Explore Services <ArrowRight size={18} /></button>
               <button className="design-button secondary" onClick={() => scrollTo('contact')}>Contact Our Team</button>

@@ -54,8 +54,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreClick }) =>
     },
     {
       icon: Building,
-      title: 'Accredited Global Employers',
-      desc: 'We collaborate strictly with verified hospitals, government ministries, and accredited medical clinics abroad.',
+      title: 'Licensed Recruitment Network',
+      desc: 'We source authentic international openings strictly from certified and licensed recruitment partners',
       color: 'bg-sky-50 text-sky-600 border-sky-100',
     },
     {
@@ -90,7 +90,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreClick }) =>
             </h2>
 
             <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg text-[#52627A] leading-relaxed font-normal">
-              Based in Kochi, Kerala, Horizon Placements is a trusted international recruitment and documentation partner committed to guiding doctors, nurses, and paramedical staff towards successful medical careers in Gulf countries and beyond.
+              Based in Kochi, Kerala, Horizon Placements is a healthcare recruitment and career-support company helping doctors, nurses, technicians and other healthcare professionals find suitable opportunities across India and the Gulf, with international opportunities facilitated through our network of licensed recruitment partners
             </p>
           </div>
         </ScrollReveal>
@@ -124,14 +124,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreClick }) =>
 
                 <div>
                   {/* Quick Stat Highlights - responsive grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-slate-100">
-                    <div className="bg-[#EAF4FF] rounded-2xl p-3.5 sm:p-4 border border-blue-100/60 text-center sm:text-left">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-100">
+                    <div className="bg-[#EAF4FF] rounded-2xl p-3 sm:p-3.5 border border-blue-100/60 text-center sm:text-left flex flex-col justify-center">
                       <span className="text-2xl sm:text-3xl font-black text-[#0866E8]">100%</span>
-                      <p className="text-xs text-[#0B1F45] font-semibold mt-0.5">Verified Hospitals &amp; Clinics</p>
+                      <p className="text-xs text-[#0B1F45] font-semibold mt-0.5">Verified Healthcare Opportunities</p>
                     </div>
-                    <div className="bg-slate-50 rounded-2xl p-3.5 sm:p-4 border border-slate-200/60 text-center sm:text-left">
+                    <div className="bg-amber-50/60 rounded-2xl p-3 sm:p-3.5 border border-amber-200/60 text-center sm:text-left flex flex-col justify-center">
                       <span className="text-2xl sm:text-3xl font-black text-[#D7A62A]">6+</span>
                       <p className="text-xs text-[#0B1F45] font-semibold mt-0.5">GCC Destination Countries</p>
+                    </div>
+                    <div className="bg-slate-50 rounded-2xl p-3 sm:p-3.5 border border-slate-200/60 text-center sm:text-left flex flex-col justify-center">
+                      <span className="text-xl sm:text-2xl font-black text-[#0866E8] tracking-tight block">PAN-INDIA</span>
+                      <p className="text-xs text-[#0B1F45] font-semibold mt-0.5">Healthcare Recruitment Network</p>
                     </div>
                   </div>
 
