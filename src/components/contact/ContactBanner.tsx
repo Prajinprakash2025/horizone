@@ -92,7 +92,7 @@ export const ContactBanner: React.FC<ContactBannerProps> = ({ onOpenModal }) => 
                     {siteConfig.contact.address}
                   </p>
                   <span className="text-[11px] text-sky-300/80 mt-0.5 inline-block">
-                    (Branch: St Martin Rd, Shankar Nagar, Maradu, Kochi)
+                    P O Junction, Kothamangalam, Kerala – 686691
                   </span>
                 </div>
               </div>

@@ -90,7 +90,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreClick }) =>
             </h2>
 
             <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg text-[#52627A] leading-relaxed font-normal">
-              Based in Kochi, Kerala, Horizon Placements is a healthcare recruitment and career-support company helping doctors, nurses, technicians and other healthcare professionals find suitable opportunities across India and the Gulf, with international opportunities facilitated through our network of licensed recruitment partners
+              Based in Kothamangalam, Kerala, Horizon Placements is a healthcare recruitment and career-support company helping doctors, nurses, technicians and other healthcare professionals find suitable opportunities across India and the Gulf, with international opportunities facilitated through our network of licensed recruitment partners
             </p>
           </div>
         </ScrollReveal>

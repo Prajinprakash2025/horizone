@@ -22,7 +22,7 @@ export const siteConfig: {
     companyName: 'Horizon Placements',
     tagline: 'Providing end-to-end solutions for candidates and employers worldwide.',
     eyebrow: 'CONTACT US',
-    address: '1st Main Rd, Shakthi Nagar, Nadur Payyam, Maradu, Kochi, Kerala – 682304',
+    address: 'Oliapuram Shopping Complex, P O Junction, Kothamangalam, Kerala – 686691',
     phoneNumbers: ['+91 79079 99807'],
     email: 'info.horizonplacements@gmail.com',
     whatsapp: '917907999807',

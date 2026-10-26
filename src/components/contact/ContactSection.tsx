@@ -72,7 +72,7 @@ export const ContactSection: React.FC = () => {
             </h2>
 
             <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg text-[#52627A] font-normal">
-              Have questions regarding overseas licensing, Dataflow, or open healthcare vacancies? Reach out to our dedicated team in Kochi today.
+              Have questions regarding overseas licensing, Dataflow, or open healthcare vacancies? Reach out to our dedicated team in Kothamangalam today.
             </p>
           </div>
         </ScrollReveal>
@@ -105,7 +105,7 @@ export const ContactSection: React.FC = () => {
                       {siteConfig.contact.address}
                     </p>
                     <span className="text-[11px] sm:text-xs text-[#52627A] block mt-1">
-                      Branch: St Martin Rd, Shankar Nagar, Jaya Nagar, Maradu, Kochi, Kerala – 682304
+                      P O Junction, Kothamangalam, Ernakulam, Kerala – 686691
                     </span>
                   </div>
                 </div>

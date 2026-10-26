@@ -121,7 +121,7 @@ export const Footer: React.FC = () => {
               </div>
 
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal pt-1">
-                Horizon Placements is a premier international healthcare recruitment and documentation agency based in Kochi, Kerala. Empowering medical professionals with genuine overseas opportunities and streamlined licensing.
+                Horizon Placements is a premier international healthcare recruitment and documentation agency based in Kothamangalam, Kerala. Empowering medical professionals with genuine overseas opportunities and streamlined licensing.
               </p>
 
               {/* Trust badges */}
@@ -232,7 +232,7 @@ export const Footer: React.FC = () => {
                       {siteConfig.contact.address}
                     </p>
                     <span className="text-[11px] text-slate-400 block mt-0.5">
-                      Branch: St Martin Rd, Shankar Nagar, Maradu, Kochi
+                      P O Junction, Kothamangalam, Kerala – 686691
                     </span>
                   </div>
                 </div>
